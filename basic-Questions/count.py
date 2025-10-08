@@ -1,8 +1,4 @@
 
-
-from ast import Num
-
-
 def counting(n):
     num = n
     count = 0
