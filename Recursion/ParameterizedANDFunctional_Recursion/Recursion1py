@@ -1,0 +1,13 @@
+
+# Recusrion using Parameterized 
+
+class Solution:
+    
+  def func(self,sum,i,n):
+      if i>n:
+          print(sum)
+          return
+      self.func(sum+i,i+1,n)
+
+s = Solution()
+s.func(0,1,10)
