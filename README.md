@@ -36,3 +36,10 @@ Short collection of Data Structures & Algorithms examples implemented in Python.
 
 ---
 If you want, I can expand this README with a navigation table, run examples, or add a CONTRIBUTING guide.
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Math
+|  |
+| ------- |
+| [0009-palindrome-number](https://github.com/aditya-niranjan/DSA-With-Python/tree/master/0009-palindrome-number) |
+<!---LeetCode Topics End-->
