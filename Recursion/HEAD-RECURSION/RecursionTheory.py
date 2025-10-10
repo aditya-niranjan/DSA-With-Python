@@ -1,3 +1,7 @@
+# Head Recursion:
+# In head recursion, the recursive call happens **before** any other statement in the function.
+
+
 
 # print my name aditya 5 times using the Recusrion
 count = 0
