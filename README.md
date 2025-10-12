@@ -43,3 +43,20 @@ If you want, I can expand this README with a navigation table, run examples, or 
 | ------- |
 | [0009-palindrome-number](https://github.com/aditya-niranjan/DSA-With-Python/tree/master/0009-palindrome-number) |
 <!---LeetCode Topics End-->
+
+## What I have done
+
+- Implemented core practice problems grouped by topic: loops, basic problems, easy problems, hashing basics, recursion, sorting, and Fibonacci.
+- Added small, focused scripts for common tasks:
+	- Palindrome checks (`basic-Questions/palindrome.py`, `loops/PalindromeUSingloops.py`, `0009-palindrome-number/0009-palindrome-number.py`).
+	- Counting and simple arithmetic helpers (`basic-Questions/count.py`, `basic-Questions/counting.py`).
+	- Frequency and factor utilities (`easy-Questions/frequncey.py`, `easy-Questions/factors.py`, `easy-Questions/bestfactor.py`).
+	- Hashing demonstrations (`Hashing-Basics/hashing.py`, `Hashing-Basics/optimalhashing.py`, `Hashing-Basics/dicationary.py`, character-hash examples).
+	- Recursion examples covering head recursion, tail recursion, parameterized recursion, and small recursion problems (`RECURSION/**`).
+	- Sorting implementations: Bubble, Insertion, Selection, and Merge (`SORTING-ALGORITHMS/**`).
+	- Fibonacci example (`fibonacci/fib.py`).
+
+- Files are written as standalone Python scripts — easy to run and adapt for learning.
+- No external dependencies; intended for learners to read, run, and modify.
+
+If you'd like, I can convert this into a table-of-contents with direct links and short descriptions for every file.
