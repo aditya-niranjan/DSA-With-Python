@@ -7,9 +7,9 @@ def Sorted_or_not(nums):
     for i in range(0,n):
         j = i+1
         if nums[i] > j:
-            return "not sorted"
+            return False
         else:
-            return "sorted"
+            return True
       
 
 print(Sorted_or_not([1,2,3,4,5,6,7,8,9]))
