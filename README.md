@@ -60,3 +60,54 @@ If you want, I can expand this README with a navigation table, run examples, or 
 - No external dependencies; intended for learners to read, run, and modify.
 
 If you'd like, I can convert this into a table-of-contents with direct links and short descriptions for every file.
+
+## Completed work (full summary)
+
+This section lists folders and notable scripts implemented in the repository so far. Files are left unchanged — this is a documentation-only summary.
+
+- Top-level helpers and runners:
+	- `main.py`, `main2.py`, `LEANER-SEARCH.py` — workspace entry / experiment scripts.
+
+- basic-Questions/
+	- `palindrome.py`, `count.py`, `counting.py`, `Prime-Numbers.py`, `aram.py`, `aramnum.py`, `main.py` — simple practice problems and small utilities.
+
+- easy-Questions/
+	- `frequncey.py`, `factors.py`, `factorBetter.py`, `bestfactor.py`, `best-hash-freq.py` — frequency, factorization, and helper utilities.
+
+- loops/
+	- `PalindromeUSingloops.py`, `palindromeUsingWhile.py`, `main.py`, `main2.py`, `main3.py` — loop-based solutions and examples.
+
+- Hashing-Basics/
+	- `hashing.py`, `optimalhashing.py`, `dicationary.py` and `charecter/` examples (`Charecter-Hashing.py`, `charcterUsinghash-list.py`) — dictionary/hash-based patterns.
+
+- ARRAYS-OR-LIST/
+	- Many array problems: `TWO-SUM.py`, `TwoSum-Optimal.py`, `Second_largest_element.py`, rotate/rotate-by-k scripts, remove duplicates, move zeros, maximum subarray (optimal + naive), K rotations, check-sorted, helpers and a `main2.py`.
+
+- SORTING-ALGORITHMS/
+	- `BUBBLE-SORT/` (bubble, best-case), `INSERTION-SORT/` (Insertion-Sort.py), `SELECTION-SORT/` (Selection-Sorting.py, SElection-SortD.py), `MERGE-SROTING/` (Merge-sortings1way.py) — classic sorting implementations.
+
+- RECURSION/
+	- Head recursion examples (`RecursionTheory.py`, `RecursionTheory2.py`), tail recursion (`Recusrion1.py`, `Recursion2.py`), parameterized and functional recursion examples, recursion problems (`FACT.PY`, `ReverseArrayRecursion.py`), and recursion-with-parameters subfolders.
+
+- fibonacci/
+	- `fib.py` — Fibonacci example(s).
+
+- Best-uniqueProblems/
+	- Unique or combined problems like `disticnte.py`, `intersection_multiple_arrays.py.py`, `Merge-two-sorted-array.py`.
+
+- QUESTIONS-SOLVING/
+	- `merge-two-sorted-arr.py`, `MAX-CONSECUTIVE-ELEMNET.py` — problem-focused scripts.
+
+- CHAT-GPT-PROVIDED-QUESTIONS/
+	- `main2.py`, `main3.py` — copies/experiments with ChatGPT-provided prompts or examples.
+
+- 0009-palindrome-number/
+	- `0009-palindrome-number.py` and a small folder README (LeetCode problem example).
+
+
+If you'd like a more structured README I can:
+	- Add a clickable table-of-contents with direct file links.
+	- Generate one-line descriptions for every file and insert them under each folder header.
+	- Create a small `run_all_examples.py` that imports/executes sample functions (documented) without touching your existing scripts.
+
+Tell me which of the above you'd like next and I will only modify `README.md` (or add a new documentation file) per your instruction.
