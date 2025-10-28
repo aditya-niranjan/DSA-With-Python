@@ -1,5 +1,5 @@
 
-class SetZerosMatrix:
+class Solution(object):
     
     def Set_Zeros(self,matrix):
         
@@ -15,7 +15,7 @@ class SetZerosMatrix:
             for j in range(0,len(matrix[0])):
                   if matrix[i][j] == float("inf"):
                       matrix[i][j]=0
-        return self.Display_result(matrix)
+        return matrix
     
     def Mark_infinity(self,matrix,rows,cols):
       
@@ -29,11 +29,7 @@ class SetZerosMatrix:
         for j in range(0,c):
             if matrix[rows][j] !=0:
                 matrix[rows][j]=float("inf")
-    def Display_result(self,matrix):
-        for i in range(0,len(matrix)):
-            for j in range(0,len(matrix[0])):
-                print(matrix[i][j],end=" ")
-            print()
+
         
 
 matrix = [
@@ -43,5 +39,5 @@ matrix = [
   [4,14,6,7]
 ]
 
-s1 = SetZerosMatrix()
+s1 = Solution()
 s1.Set_Zeros(matrix)
