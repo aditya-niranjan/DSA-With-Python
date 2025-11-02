@@ -1,7 +1,12 @@
 
+
+# same code as the lower bounde and upper bound just we changeing
+#  the upper bound initail value to len of the nums
+# and also just making UB - LB + 1 to get the total occurrences of the value in the sorted array
+
 def Lower_Bound(nums,target):
     n = len(nums)
-    lower_bound = n
+    lower_bound = -1
     low = 0
     high = n-1
     while low <= high:
@@ -31,4 +36,4 @@ def Upper_Bound(nums,target):
 
 nums = [1,2,3,3,3,3,3,5,6,8,9,9,10]
 target = int(input("Enter the target value to find Lower Bound: "))
-print(Lower_Bound(nums,target),Upper_Bound(nums,target))
+print(Upper_Bound(nums,target)-Lower_Bound(nums,target)+1)
