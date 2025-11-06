@@ -1,4 +1,6 @@
 
+
+
 class Node:
   def __init__(self,val):
       self.val = val
@@ -43,12 +45,41 @@ class SinglyLinkedList:
       prev_node.next = new_node
       new_node.next = current
 
+  def Delete(self,val):
+    temp = self.head
+    if temp.next is not None:
+      if temp.val == val:
+        self.head = temp.next
+        return
+      else:
+          found = False
+          prev = None
+          while temp is not None:
+              if temp.val == val:
+                found = True
+                break
+              prev = temp
+              temp = temp.next
+          if found:
+             prev.next = temp.next
+             return
+          else:
+             print("Node not Found")
+
+            
+        
+
+
+
+
 sll = SinglyLinkedList()
 n = 5
 for i in range(1,n+1):
    sll.append(i * 10)
 
-sll.treversl()
-sll.Insert(100,0)
+sll.Delete(10)
+sll.Delete(20)
+sll.Delete(30)
+sll.Delete(1000)
 print()
 sll.treversl()
