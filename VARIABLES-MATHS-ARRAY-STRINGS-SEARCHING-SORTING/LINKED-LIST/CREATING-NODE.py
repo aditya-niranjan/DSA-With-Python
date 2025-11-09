@@ -24,12 +24,3 @@ class SinglyLinkedList:
            curr = self.head
            while curr is not None:
               print(curr.val,end=" ")
-              curr = curr.next
-
-
-sll = SinglyLinkedList()
-n = 5
-for i in range(1,n+1):
-   sll.append(i * i * 10)
-
-sll.treversl()
