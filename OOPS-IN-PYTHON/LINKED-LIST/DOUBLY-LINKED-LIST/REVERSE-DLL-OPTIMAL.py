@@ -24,17 +24,16 @@ class DoublyLinkedList:
             new_node.next = self.head
             self.head.prev = new_node
             self.head = new_node
-    def reverse(self):
-        myStack = []
-        temp = self.head
-        while temp is not None:
-            myStack.append(temp.val)
-            temp = temp.next
-        temp = self.head
-        while temp is not None:
-            e = myStack.pop()
-            temp.val = e
-            temp = temp.next
+    def secondreverse(self):
+        curr = self.head
+        prev = None
+        while curr is not None:
+            front = curr.next
+            curr.next = prev
+            curr.prev = front
+            prev = curr
+            curr = front
+        self.head = prev
     def display(self):
         current = self.head
         while current:
@@ -52,6 +51,6 @@ dll.insert_at_head(40)
 dll.insert_at_head(50)
 print("Original Doubly Linked List:")
 dll.display()
-dll.reverse()
+dll.secondreverse()
 print()
 dll.display()
