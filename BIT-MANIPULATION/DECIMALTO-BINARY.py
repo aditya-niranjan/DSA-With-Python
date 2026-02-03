@@ -23,3 +23,4 @@ while num:
 print(bit)              # reversed binary
 print(bit[::-1])       # correct binary order
 
+print(bit[2])
