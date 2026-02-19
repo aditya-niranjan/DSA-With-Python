@@ -1,0 +1,9 @@
+
+
+from math import e
+
+
+n = int(input("Enter a number to get start's in pattern: "))
+
+for i in range(n, 0, -1):
+    print(" " * (n - i) + "*" * (2*i - 1))
