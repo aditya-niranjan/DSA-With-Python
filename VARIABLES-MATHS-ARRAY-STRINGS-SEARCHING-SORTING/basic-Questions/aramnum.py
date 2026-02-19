@@ -4,7 +4,8 @@
 
 # For example:
 
-# 153 is an Armstrong number because 
+# 153 is an Armstrong number because
+# 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153 
 
 
 def ArmStrongNumber(n):
