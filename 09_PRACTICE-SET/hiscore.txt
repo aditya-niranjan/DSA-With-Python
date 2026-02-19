@@ -1,0 +1,83 @@
+var whiteboard = document.getElementById("whiteboard");
+const ctx = whiteboard.getContext("2d");
+let isMouseDown = false;
+let hasDrawn = false;
+
+
+whiteboard.onmouseup = (_) => {
+    isMouseDown = false;
+}
+
+document
+.getElementById("btn-reset")
+.addEventListener(
+    "click",
+    function() {
+        ctx.clearRect(0, 0, 200, 200);
+    }
+);
+
+whiteboard.onmousedown = (event) => {
+    isMouseDown = true;
+    const x = event.pageX - event.currentTarget.offsetLeft;
+    const y = event.pageY - event.currentTarget.offsetTop;
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+    ctx.moveTo(x, y);
+    hasDrawn = true;
+    
+}
+
+whiteboard.onmousemove = function(event) {
+    if (isMouseDown) {
+        const x = event.pageX - event.currentTarget.offsetLeft;
+        const y = event.pageY - event.currentTarget.offsetTop;
+        ctx.lineTo(x, y);
+        // NOTE(om): makes live drawing
+        ctx.stroke();
+    }
+}
+
+
+document.getElementById("btn-send").addEventListener("click", async () => {
+    try {
+        const whiteboard = document.getElementById("whiteboard");
+        if (!whiteboard) throw new Error("Whiteboard not found");
+
+    if(!hasDrawn){
+        alert("Erro: you should Draw something on the Whiteboard!!")
+    }else{
+
+        
+        whiteboard.toBlob(async (blob) => {
+            if (!blob) throw new Error("Failed to create image");
+            const file = new File([blob], "whiteboard.png", { type: "image/png" });
+            const formData = new FormData();
+            formData.append("file", file);
+            
+            try {
+                const response = await fetch("http://localhost:8000/upload", {
+                    method: "POST",
+                    body: formData
+                });
+                if (!response.ok) throw new Error(`Upload failed: ${await response.text()}`);
+                const data = await response.json();
+                console.log("Success:", data);
+                alert("Whiteboard image sent successfully!");
+            } catch (error) {
+                console.error("Error:", error);
+                alert(`Failed to send image: ${error.message}`);
+            }
+        }, "image/png");
+        ctx.clearRect(0, 0, 200, 200);
+    }
+    
+    } catch (error) {
+        console.error("Error:", error);
+        alert(`Error: ${error.message}`);
+    }
+});
+
+
