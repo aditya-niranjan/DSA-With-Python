@@ -15,3 +15,8 @@ result = compare_strings(string,target)
 print(result)
 
 # time complexity: O(n) where n is the length of the string
+
+# cook your dish here
+# string = "IloveCodeChef"
+
+# print(len(string))
