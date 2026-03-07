@@ -48,5 +48,5 @@ class Solution(object):
         # If no doubles left, just subtract remaining in one go
         if target > 1:
             steps += (target - 1)
-        
+       
         return steps
